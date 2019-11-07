@@ -11,9 +11,9 @@ resource "null_resource" "web" {
   }
 
   tags = {
-    Name = "web ${var.instance_count.index+1}/${var.instance_count}"
+    Name = "web ${var.instance_count.index + 1}/${var.instance_count}"
   }
-   provisioner "local-exec" {
+  provisioner "local-exec" {
     command = "echo ${aws_instance.web.public_ip} >> my_infrastructure.txt" # this will add the ip to the terrafom local machine
   }
 }
