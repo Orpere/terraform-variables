@@ -41,6 +41,12 @@ Variables are used for:
   3) keep sensitive data as keys and passwords out of code control systems as Github
   4) populate other variables in the terraform configuration
 
+**Variables can have the follow optional attributes between {}:**
+
+1) Description - human readable text describing the value
+2) type - string,list,map (if omitted is taken ad default)
+3) default - sets the var as default
+
 example : **variables.tf**
 
 ```terraform
