@@ -41,7 +41,7 @@ Variables are used for:
   3) keep sensitive data as keys and passwords out of code control systems as Github
   4) populate other variables in the terraform configuration
 
-example : variables.tf
+example : **variables.tf**
 
 ```terraform
 variable "instance_count" {
@@ -56,7 +56,7 @@ variable "instance_type" {}
 
 If a variable don't have any value attributed Terraform will prompt for his value on the execution.
 
-a variable must be defined and the values can be defined on other file as terraform.tfvars
+a variable must be defined and the values can be defined on other file as **terraform.tfvars**
 
 ```terraform
 instance_count = "2"
