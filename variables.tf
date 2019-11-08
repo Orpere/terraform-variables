@@ -1,8 +1,5 @@
-variable "instance_count" {
-  default     = "2"
-  description = "count the number of instances"
+variable "test" {
+  type        = "string"
+  description = "some string"
+  default     = "test var"
 }
-
-variable "ami_id" {}
-
-variable "instance_type" {}
