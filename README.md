@@ -27,7 +27,7 @@ cd terraform-variables
 
 ### Task - terraform init
 
-- this will retrieve all dependencies for terraform scripts
+- this will retrieve all dependencies for terraform files
 
 ```terraform
 terraform init
