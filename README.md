@@ -1,63 +1,76 @@
 
-# terraform-variables -> repo that I can use to see how variables work
+# terraform-variables ->repo that you can use to see how variables work
 
-This repo has as target to define and show what I have learned about terraform variables
+## how can I use this repository`?`
 
-how can I use this repository?
-You can use this repo as reference or you can clone the repository to your computer using the follow commands
+This repo has as dependencies a command line or shell git and terraform.You can find the install instructions bellow on [EXTRAS](#extras) section.
+
+## How can I use this repo`?`
+
+### Task - clone repo terraform-variables
+
+- open your shell or command line and go to the directory where you pretend to add the repo
+
+```bash
+cd <directory where pretend to add the repo>
+```
 
 ```git
 git clone git@github.com:Orpere/terraform-variables.git
 ```
 
+### Task - move to your repo folder
+
+```bash
+cd terraform-variables
+```
+
+### Task - terraform init
+
+- this will retrieve all dependencies for terraform scripts
+
+```terraform
+terraform init
+```
+
+### Task - run terraform apply
+
+```terraform
+terraform apply
+```
+
+- This step will prompt `<<`Do you want to perform these actions?`>>`
+  the answer should be **yes**
+
+ 
+
+### Task - check the result
+
+- In this case the results should be as bellow
+
+```terraform 
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+test_result = test var
+```
+
+### Task - Terraform destroy
+
+```terraform
+terraform destroy
+```
+
+- This will request confirmation and if your answer is **yes**
+- this will wipe the resources you have builded
+  
+#### EXTRAS
+
+This repo was based on the [documentation](https://www.terraform.io/docs/configuration/variables.html)
+
+[Install git](https://gist.github.com/derhuerst/1b15ff4652a867391f03#file-intro-md)
 for more instructions to use git you can check the [link](https://rogerdudler.github.io/git-guide/) it will have a much better explanation about all git steps
 
-After clone the repo you can install terraform downloading the adequate version to your OS on [Terraform](https://www.terraform.io/downloads.html).
-
-Terraform most used commands are:
-
-- terraform fmt - cleans up your code formatting
-- terraform init - retrieves your modules and dependencies
-- terraform plan - plans the AWS infrastructure
-- terraform apply - creates the AWS infrastructure
-
-## Terraform variables
-
-The inspiration for this repository come from the Hashicorp [documentation](https://www.terraform.io/docs/configuration-0-11/variables.html)
-
-![terraform](terraform.png)
-
-**Variables are defined parameters we can use to pass information to the terraform files.**
-
-Variables are used for:
-
-  1) To store sensitive values
-  2) Refactoring existing values
-  3) keep sensitive data as keys and passwords out of code control systems as Github
-  4) populate other variables in the terraform configuration
-
-**Variables can have the follow optional attributes between {}:**
-
-1) Description - human readable text describing the value
-2) type - string,list,map (if omitted is taken ad default)
-3) default - sets the var as default
-
-example : **variables.tf**
-
-```terraform
-variable "test" {
-  type        = "string"
-  description = "some string"
-  default     = "test var"
-}
-```
-
-If a variable don't have any value attributed Terraform will prompt for his value on the execution.
-
-a variable must be defined and the values can be defined on other file as **terraform.tfvars**
-
-```terraform
-test = "hello world"
-```
-
-Note: default variables have low precedence. which can be override by CLI
+After clone the repo you can install terraform downloading the adequate version to your OS on [Terraform](https://www.terraform.io/downloads.html)
+If you don't know how to install please follow the [tutorial](https://learn.hashicorp.com/terraform/getting-started/install.html)
