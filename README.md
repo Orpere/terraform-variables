@@ -7,7 +7,9 @@ This repo has as dependencies a command line or shell git and terraform.You can 
 
 ## How can I use this repo`?`
 
-### Task - clone repo terraform-variables
+_Note_: my login on GitHub is capitalized and that is the reason why the "Orpere" appears like this.
+
+### 1 - clone repo terraform-variables
 
 - open your shell or command line and go to the directory where you pretend to add the repo
 
@@ -16,16 +18,16 @@ cd <directory where pretend to add the repo>
 ```
 
 ```git
-git clone git@github.com:Orpere/terraform-variables.git
+git clone git@github.com:orpere/terraform-variables.git
 ```
 
-### Task - move to your repo folder
+### 2 - move to your repo folder
 
 ```bash
 cd terraform-variables
 ```
 
-### Task - terraform init
+### 3 - terraform init
 
 - this will retrieve all dependencies for terraform files
 
@@ -33,22 +35,20 @@ cd terraform-variables
 terraform init
 ```
 
-### Task - run terraform apply
+### 4 - run terraform apply
 
 ```terraform
 terraform apply
 ```
 
 - This step will prompt `<<`Do you want to perform these actions?`>>`
-  the answer should be **yes**
+  - the answer should be **yes**
 
- 
-
-### Task - check the result
+### 5 - check the result
 
 - In this case the results should be as bellow
 
-```terraform 
+```terraform
 Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 
 Outputs:
@@ -56,7 +56,7 @@ Outputs:
 test_result = test var
 ```
 
-### Task - Terraform destroy
+### 6 - Terraform destroy
 
 ```terraform
 terraform destroy
